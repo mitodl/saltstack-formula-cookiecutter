@@ -1,0 +1,35 @@
+{{ '{%' }} set {{ cookiecutter.formula_name }} = salt['grains.filter_by']({
+    'Debian': {
+        'pkgs': [],
+        'service': '{{ cookiecutter.formula_name }}',
+        'conf_file': '/etc/{{ cookiecutter.formula_name }}/{{ cookiecutter.formula_name }}.conf',
+    },
+    'RedHat': {
+        'pkgs': [],
+        'service': '{{ cookiecutter.formula_name }}',
+        'conf_file': '/etc/{{ cookiecutter.formula_name }}/{{ cookiecutter.formula_name }}.conf',
+    },
+}, grain='os_family', merge=salt['pillar.get']('{{ cookiecutter.formula_name }}:lookup')) {{ '%}' }}
+
+
+{{ '{%' }} set {{ cookiecutter.formula_name }}_config = salt['pillar.get']('{{ cookiecutter.formula_name }}:config', {
+    'key': 'value',
+}, merge=True) {{ '%}' }}
+
+{% raw %}{# If Lithium gets released then below code can be uncommentted because it is more DRY #}{% endraw %}
+{{ '{#' }}
+{{ '{%' }} set {{ cookiecutter.formula_name }} = salt['grains.filter_by']({
+    'default': {
+        'pkg': '{{ cookiecutter.formula_name }}',
+        'service': '{{ cookiecutter.formula_name }}',
+        'conf_file': '/etc/{{ cookiecutter.formula_name }}/{{ cookiecutter.formula_name }}.conf',
+        'config': {
+            'key': 'value',
+        },
+    },
+    'Debian': {
+    },
+    'RedHat': {
+    },
+}, grain='os_family', merge=salt['pillar.get']('{{ cookiecutter.formula_name }}:lookup'), base='default') {{ '%}' }}
+{{ '#}' }}

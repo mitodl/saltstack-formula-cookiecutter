@@ -1,0 +1,9 @@
+{
+	"formula_name": "boilerplate",
+	"formula_short_description": "SaltStack Formula Boilerplate contains all the boilerplate you need to create a SaltStack Formula.",
+	"full_name": "Tobias Macey",
+	"github_username": "blarghmatey",
+	"release_date": "2016-02-19",
+	"year": "2016",
+	"version": "0.1.0"
+}
