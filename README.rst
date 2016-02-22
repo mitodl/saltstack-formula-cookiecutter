@@ -36,12 +36,3 @@ Or Submit a Pull Request
 
 I also accept pull requests on this, if they're small, atomic, and if they
 make my own developing experience better.
-
-Example
-~~~~~~~
-
-An example of a formula created from this template can be found
-here: https://github.com/slafs/example-formula
-(i.e. when asked about a formula name I typed ``example``)
-
-

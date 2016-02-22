@@ -1,9 +1,12 @@
 {
-	"formula_name": "boilerplate",
-	"formula_short_description": "SaltStack Formula Boilerplate contains all the boilerplate you need to create a SaltStack Formula.",
-	"full_name": "Tobias Macey",
-	"github_username": "blarghmatey",
-	"release_date": "2016-02-19",
-	"year": "2016",
-	"version": "0.1.0"
+    "formula_name": "boilerplate",
+    "formula_short_description": "SaltStack Formula Boilerplate contains all the boilerplate you need to create a SaltStack Formula.",
+    "full_name": "Tobias Macey",
+    "github_username": "blarghmatey",
+    "release_date": "2016-02-19",
+    "year": "2016",
+    "version": "0.1.0",
+    "owner": "SaltStack Formulas",
+    "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
+    "vagrant-box": ["centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/vivid4"]
 }
