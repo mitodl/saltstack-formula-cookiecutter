@@ -5,8 +5,10 @@
     "github_username": "blarghmatey",
     "release_date": "2016-02-19",
     "year": "2016",
-    "version": "0.1.0",
+    "version": "201602",
     "owner": "SaltStack Formulas",
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
-    "vagrant-box": ["centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/vivid4"]
+    "vagrant-box": ["centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/vivid4"],
+    "supported_os": "RedHat, CentOS, Ubuntu, Debian",
+    "supported_os_family": "RedHat, Debian"
 }

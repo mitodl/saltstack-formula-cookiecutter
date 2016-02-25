@@ -1,0 +1,9 @@
+name: {{ cookiecutter.formula_name }}
+os: {{ cookiecutter.supported_os }}
+os_family: {{ cookiecutter.supported_os_family }}
+version: {{ cookiecutter.version }}
+release: 1
+summary: {{ cookiecutter.formula_short_description }}
+description: {{ cookiecutter.formula_short_description }}
+top_level_dir: {{ cookiecutter.formula_name }}
+recommended: 
