@@ -32,4 +32,4 @@ Template
 
 This formula was created from a cookiecutter template.
 
-See https://github.com/slafs/cookiecutter-saltstack-formula.
+See https://github.com/mitodl/saltstack-formula-cookiecutter.
