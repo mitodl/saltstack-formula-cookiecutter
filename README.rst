@@ -1,5 +1,5 @@
 ==============================
-cookiecutter-saltstack-formula
+saltstack-formula-cookiecutter
 ==============================
 
 Cookiecutter template for a SaltStack Formula.
@@ -12,7 +12,7 @@ Usage
 
 Generate a SaltStack formula project::
 
-    cookiecutter https://github.com/slafs/cookiecutter-saltstack-formula.git
+    cookiecutter https://github.com/mitodl/saltstack-formula-cookiecutter
 
 Answer few questions about formula name, your name etc.
 

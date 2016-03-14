@@ -14,7 +14,5 @@ then
 else
     SRCDIR=/home/vagrant/sync
 fi
-sudo salt-call \* pkg.install python-pip
-sudo pip install testinfra
 sudo rm -rf $SRCDIR/tests/__pycache__
 testinfra $SRCDIR/tests
