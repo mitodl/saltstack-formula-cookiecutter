@@ -1,4 +1,4 @@
-{% if cookiecutter.license == 'Apache Software license 2.0' %}
+{% if cookiecutter.license == 'Apache Software License 2.0' %}
    Copyright (c) {{ cookiecutter.year }} {{ cookiecutter.owner }}
 
    Licensed under the Apache License, Version 2.0 (the "License");
