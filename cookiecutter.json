@@ -6,7 +6,7 @@
     "release_date": "2016-02-19",
     "year": "2016",
     "version": "201602",
-    "owner": "SaltStack Formulas",
+    "owner": ["Massachusetts Institute of Technology", "SaltStack Formulas"]
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
     "vagrant_box": ["centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/vivid4"],
     "supported_os": "RedHat, CentOS, Ubuntu, Debian",
