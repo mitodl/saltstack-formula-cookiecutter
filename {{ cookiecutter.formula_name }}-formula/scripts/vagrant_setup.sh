@@ -15,7 +15,4 @@ echo "\
 base:
   '*':
     - pillar" | sudo tee /srv/pillar/top.sls
-echo "\
-base:
-  '*':
-    - {{ cookiecutter.formula_name }}" | sudo tee /srv/salt/top.sls
+sudo cp $SRCDIR/salt-top.example /srv/salt/top.sls
