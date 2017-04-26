@@ -3,12 +3,13 @@
     "formula_short_description": "SaltStack Formula Boilerplate contains all the boilerplate you need to create a SaltStack Formula.",
     "full_name": "Tobias Macey",
     "github_username": "blarghmatey",
-    "release_date": "2016-02-19",
-    "year": "2016",
-    "version": "201602",
+    "release_date": "{% now 'utc', '%Y-%m-%d' %}",
+    "year": "{% now 'utc', '%Y' %}",
+    "version": "{% now 'utc', '%Y%m' %}",
     "owner": ["Massachusetts Institute of Technology", "SaltStack Formulas"],
     "license": ["MIT", "BSD-3", "GNU GPL v3.0", "Apache Software License 2.0"],
     "vagrant_box": ["multi", "centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/xenial64"],
     "supported_os": "RedHat, CentOS, Ubuntu, Debian",
-    "supported_os_family": "RedHat, Debian"
+    "supported_os_family": "RedHat, Debian",
+    "_extensions": ["jinja2_time.TimeExtension"]
 }

@@ -1,4 +1,4 @@
-{{ '{%' }} set {{ cookiecutter.formula_name }} = salt['grains.filter_by']({
+{{ '{%' }} set {{ cookiecutter.formula_name|replace('-', '_') }} = salt.grains.filter_by({
     'default': {
         'pkg': '{{ cookiecutter.formula_name }}',
         'service': '{{ cookiecutter.formula_name }}',
@@ -11,4 +11,4 @@
     },
     'RedHat': {
     },
-}, grain='os_family', merge=salt['pillar.get']('{{ cookiecutter.formula_name }}:lookup'), base='default') {{ '%}' }}
+}, grain='os_family', merge=salt.pillar.get('{{ cookiecutter.formula_name }}:overrides), base='default') {{ '%}' }}
