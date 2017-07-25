@@ -3,6 +3,7 @@
     "formula_short_description": "SaltStack Formula Boilerplate contains all the boilerplate you need to create a SaltStack Formula.",
     "full_name": "Tobias Macey",
     "github_username": "blarghmatey",
+    "email_address": "user@example.com",
     "release_date": "{% now 'utc', '%Y-%m-%d' %}",
     "year": "{% now 'utc', '%Y' %}",
     "version": "{% now 'utc', '%Y%m' %}",
