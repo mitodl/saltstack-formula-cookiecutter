@@ -1,6 +1,6 @@
 {{ '{%' }} set {{ cookiecutter.formula_name|replace('-', '_') }} = salt.grains.filter_by({
     'default': {
-        'pkg': '{{ cookiecutter.formula_name }}',
+        'pkgs': ['{{ cookiecutter.formula_name }}'],
         'service': '{{ cookiecutter.formula_name }}',
         'conf_file': '/etc/{{ cookiecutter.formula_name }}/{{ cookiecutter.formula_name }}.conf',
         'config': {
