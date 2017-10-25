@@ -1,6 +1,8 @@
 {% raw %}{# Template for a config file. Context object name: config #}
-[section]
-{% for key, value in config.items() %}
+{% for section, settings in config.items() %}
+[{{ section }}]
+{% for key, value in settings.items() %}
 {{ key }}={{ value }}
+{% endfor %}
 {% endfor %}
 {% endraw %}
