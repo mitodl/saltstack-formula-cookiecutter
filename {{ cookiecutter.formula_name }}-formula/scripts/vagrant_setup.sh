@@ -9,7 +9,7 @@ fi
 sudo mkdir -p /srv/salt
 sudo mkdir -p /srv/pillar
 sudo mkdir -p /srv/formulas
-{% if cookiecutter.deploy_salt_packages == "True" %}
+{% if cookiecutter.deploy_as_salt_package == "True" %}
 sudo mkdir -p /var/cache/salt/master
 {% else %}
 sudo cp $SRCDIR/pillar.example /srv/pillar/pillar.sls

@@ -89,7 +89,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "scripts/gitfs_deps.sh"
   {% endif %}
 
-  {% if cookiecutter.deploy_salt_packages == "True" %}
+  {% if cookiecutter.deploy_as_salt_package == "True" %}
   #set everything up, but don't run highstate yet.
   config.vm.provision :salt do |salt|
     salt.minion_config = 'minion.conf'
@@ -100,7 +100,7 @@ Vagrant.configure(2) do |config|
     salt.verbose = true
   end
 
-  #configure the spm packages
+  #configure spm packages
   spm_remote_url = ENV['SPM_REMOTE_URL']
   config.vm.provision "shell", path: "scripts/spm.sh", env: {"SPM_REMOTE_URL" => spm_remote_url}
 

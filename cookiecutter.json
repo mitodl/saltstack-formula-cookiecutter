@@ -12,6 +12,6 @@
     "vagrant_box": ["multi", "centos/7", "debian/wheezy64", "debian/jessie64", "ubuntu/trusty64", "ubuntu/xenial64"],
     "supported_os": "RedHat, CentOS, Ubuntu, Debian",
     "supported_os_family": "RedHat, Debian",
-    "deploy_salt_package": ["False", "True"],
+    "deploy_as_salt_package": ["False", "True"],
     "_extensions": ["jinja2_time.TimeExtension"]
 }
