@@ -88,6 +88,24 @@ Vagrant.configure(2) do |config|
   {% if cookiecutter.owner == "Massachusetts Institute of Technology" %}
   config.vm.provision "shell", path: "scripts/gitfs_deps.sh"
   {% endif %}
+
+  {% if cookiecutter.deploy_salt_packages == "True" %}
+  #set everything up, but don't run highstate yet.
+  config.vm.provision :salt do |salt|
+    salt.minion_config = 'minion.conf'
+    salt.bootstrap_options = '-U -Z'
+    salt.masterless = true
+    salt.run_highstate = false
+    salt.colorize = true
+    salt.verbose = true
+  end
+
+  #configure the spm packages
+  spm_remote_url = ENV['SPM_REMOTE_URL']
+  config.vm.provision "shell", path: "scripts/spm.sh", env: {"SPM_REMOTE_URL" => spm_remote_url}
+
+  #now run highstate.
+  {% endif %}
   config.vm.provision :salt do |salt|
     salt.minion_config = 'minion.conf'
     salt.bootstrap_options = '-U -Z'
