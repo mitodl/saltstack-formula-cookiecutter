@@ -21,10 +21,15 @@ Available states
 
 TODO - add description of this state
 
-``{{ cookiecutter.formula_name }}.conf``
+``{{ cookiecutter.formula_name }}.install``
 {% for x in cookiecutter.formula_name %}-{% endfor %}---------
 
-TODO - add description of this state
+Handles installation of {{ cookiecutter.formula_name }}
+
+``{{ cookiecutter.formula_name }}.config``
+{% for x in cookiecutter.formula_name %}-{% endfor %}---------
+
+Handles configuration of {{ cookiecutter.formula_name }}
 
 
 Template
