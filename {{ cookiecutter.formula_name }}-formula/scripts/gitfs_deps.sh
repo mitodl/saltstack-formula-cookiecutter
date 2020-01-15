@@ -4,10 +4,10 @@ if [ $(which apt-get) ];
 then
     sudo apt-get update
     PKG_MANAGER="apt-get"
-    PKGS="python-dev git curl"
+    PKGS="python3-dev git curl"
 else
     PKG_MANAGER="yum"
-    PKGS="python-devel git curl"
+    PKGS="python3-devel git curl"
 fi
 
 sudo $PKG_MANAGER -y install $PKGS
@@ -17,7 +17,8 @@ then
     echo ''
 else
     curl -L "https://bootstrap.pypa.io/get-pip.py" > get_pip.py
-    sudo python get_pip.py
+    sudo python3 get_pip.py
     rm get_pip.py
-    sudo pip install gitpython
 fi
+
+sudo pip3 install gitpython testinfra
